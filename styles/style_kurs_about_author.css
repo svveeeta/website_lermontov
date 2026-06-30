@@ -1,0 +1,158 @@
+.page-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 0 40px;
+}
+
+.page-header h1 {
+    font-family: "Cormorant SC", serif;
+    font-size: clamp(48px, 8vw, 70px);
+    color: #930D0D;
+    text-transform: uppercase;
+}
+
+.content-section {
+    width: min(1000px, calc(100% - 80px));
+    margin: 0 auto 60px;
+}
+
+/* Карточка автора */
+.author-profile {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    background: #F5E9CE;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 5px 6px 15px #E4D3B2;
+}
+
+.author-image {
+    flex: 0 0 280px;
+}
+
+.author-image img {
+    width: 100%;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-info h3 {
+    font-family: "Cormorant SC", serif;
+    font-size: 36px;
+    color: #930D0D;
+    margin-bottom: 5px;
+}
+
+.author-years {
+    font-size: 20px;
+    color: #930D0D;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    border-left: 3px solid #930D0D;
+    padding-left: 15px;
+}
+
+.author-info p {
+    font-size: 17px;
+    line-height: 1.4;
+    color: #930D0D;
+    margin-bottom: 15px;
+}
+
+/* Информационные блоки */
+.info-card {
+    background: #F5E9CE;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    box-shadow: 5px 6px 15px #E4D3B2;
+}
+
+.info-card h2 {
+    font-family: "Cormorant SC", serif;
+    font-size: 30px;
+    color: #930D0D;
+    margin-bottom: 20px;
+    border-left: 4px solid #930D0D;
+    padding-left: 20px;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    color: #930D0D;
+    margin: 20px 0 15px 0;
+}
+
+.info-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #930D0D;
+    margin-bottom: 15px;
+}
+
+.info-card ul {
+    margin: 15px 0 15px 30px;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #930D0D;
+}
+
+.cavcas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.cavcas-item {
+    background: rgba(147, 13, 13, 0.05);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #930D0D;
+}
+
+.cavcas-item strong {
+    display: block;
+    font-size: 22px;
+    color: #930D0D;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .page-header h2 {
+        padding: 0;
+    }
+
+    .author-profile {
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+        text-align: center;
+    }
+    .author-image {
+        flex: 0 0 auto;
+        max-width: 220px;
+    }
+    .author-years {
+        border-left: none;
+        border-top: 2px solid #930D0D;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .info-card {
+        padding: 25px 20px;
+    }
+    .info-card h2 {
+        font-size: 26px;
+    }
+}

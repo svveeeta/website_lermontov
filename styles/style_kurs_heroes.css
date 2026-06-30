@@ -1,0 +1,242 @@
+.heroes-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 0 40px;
+}
+
+.heroes-header h1 {
+    font-family: "Cormorant SC", serif;
+    font-size: clamp(48px, 8vw, 70px);
+    color: #930D0D;
+    text-transform: uppercase;
+}
+
+.heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: min(1200px, calc(100% - 80px));
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+/* Карточка героя */
+.hero-card {
+    background: #F5E9CE;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 5px 6px 15px #E4D3B2;
+    position: relative;
+}
+
+.hero-card:hover {
+    transform: translateY(-6px);
+}
+
+.hero-card-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: #E4D3B2;
+}
+
+.hero-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-card-content {
+    padding: 25px 20px 30px;
+    text-align: center;
+}
+
+.hero-card-content h3 {
+    font-family: "Cormorant SC", serif;
+    font-size: 28px;
+    color: #930D0D;
+    margin-bottom: 10px;
+}
+
+.hero-card-content .role {
+    font-size: 15px;
+    color: #930D0D;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-card-content .short-desc {
+    font-size: 15px;
+    color: #930D0D;
+    line-height: 1.4;
+}
+
+.hero-card-content .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #930D0D;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #930D0D;
+    padding-bottom: 4px;
+}
+
+/* Попап */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: #F5E9CE;
+    max-width: 800px;
+    width: 90%;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.4s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #930D0D;
+    background: #F5E9CE;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.modal-close:hover {
+    background: #930D0D;
+    color: #F5E9CE;
+}
+
+.modal-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-text {
+    padding: 30px 35px;
+}
+
+.modal-text h2 {
+    font-family: "Cormorant SC", serif;
+    font-size: 36px;
+    color: #930D0D;
+    margin-bottom: 8px;
+}
+
+.modal-text .modal-role {
+    font-size: 16px;
+    color: #930D0D;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    border-left: 3px solid #930D0D;
+    padding-left: 15px;
+}
+
+.modal-text p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #930D0D;
+    margin-bottom: 15px;
+}
+
+.modal-text .quote {
+    font-style: italic;
+    border-left: 3px solid #930D0D;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #930D0D;
+    font-size: 15px;
+}
+
+/* Адаптив для планшетов */
+@media (min-width: 769px) and (max-width: 900px) {
+    .heroes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroes-header {
+        padding: 90px 0 30px;
+    }
+    
+    .heroes-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .modal-text {
+        padding: 20px;
+    }
+    
+    .modal-text h2 {
+        font-size: 28px;
+    }
+    
+    .modal-image {
+        height: 250px;
+    }
+}

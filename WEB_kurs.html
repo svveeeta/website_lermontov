@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой нашего времени — М.Ю. Лермонтов | Сайт о романе</title>
+    <link rel="stylesheet" href="style_kurs.css" type="text/css">
+    <link rel="stylesheet" href="style_kurs_adaptive.css" type="text/css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script_kurs_menu.js" defer></script>
+    <script src="js/script_kurs.js" defer></script>
+    
+    <meta name="description" content="Тематический сайт о романе М.Ю. Лермонтова «Герой нашего времени». История создания, сюжет, герои, цитаты.">
+    <meta name="keywords" content="Герой нашего времени, Лермонтов, Печорин, княжна Мери, роман, русская литература, анализ, герои, цитаты, иллюстрации">
+    <meta name="author" content="Попова Светлана">
+    <meta name="robots" content="index, follow">
+
+    <meta name="language" content="ru">
+    <meta name="geo.region" content="RU"> 
+
+    <link rel="icon" type="image/svg" href="images/гнв/favicon.svg">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <nav class="menu" id="header-menu"></nav>
+            <button class="burger" id="burger">
+                ☰
+            </button>
+            <img src="images/гнв/bookmark.png" alt="" class="bookmark">
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <!-- изображения -->
+            <img src="images/гнв/hero-man.png" class="desktop-img" id="hero-man" alt="">
+            <img src="images/гнв/hero-man-mobile.png" class="mobile-img" id="hero-man-mobile" alt="">
+            <img src="images/гнв/hero-author.png" class="desktop-img" id="hero-author" alt="">
+            <img src="images/гнв/hero-author_mobile.png" class="mobile-img" id="hero-author-mobile" alt="">
+
+            <div class="container">
+
+                <!-- контент -->
+                <div class="title">
+                    <span id="title-hero">Герой</span>
+                    <span id="title-our">нашего</span>                     
+                    <span id="title-time">времени</span>     
+                </div>             
+                
+                <!-- плашка бумажная -->
+                <div id="note-frame"></div>  
+                <div id="note">
+                    Психологический роман
+                    о судьбе человека
+                    и противоречиях эпохи
+                </div> 
+            </div>          
+        </section>
+        <section id="facts-container"></section>
+        <section id="quote-block">
+            <hr id="top-line">
+            
+            <p id="quote">
+                <span id="typed-text"></span>
+                <span id="cursor">|</span>
+            </p>
+                
+            <hr id="bottom-line">
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery" id="gallery"></div>  
+
+            <div class="gallery-controls">
+                <button class="arrow left" id="prev">←</button>      
+                <button class="arrow right" id="next">→</button>
+            </div>                 
+        </section>
+
+        <section class="footer">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <p>Герой нашего времени<br>
+                    М.Ю. Лермонтов</p>
+                </div>
+
+                <nav class="footer-menu" id="footer-menu"></nav>
+
+                <div class="footer-right">
+                    <p>Попова Светлана<br>
+                    Курсовой проект, 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
